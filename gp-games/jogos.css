@@ -1,0 +1,303 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+[contexto="claro"] {
+    background-color: #ffffff;
+    transition: 0.5s ease-in-out;
+}
+
+[contexto="escuro"] {
+    transition: 0.5s ease-in-out;
+    background-color: #333335  ;
+}
+
+[contexto="escuro"] .checkbox_flutuante {
+    background-color: orange;
+    color: black;
+    transition: 0.5s ease-in-out;
+}
+
+[contexto="escuro"] .titulo_jogo,.rodape {
+    color: orange;
+    transition: 0.5s ease-in-out;
+}
+
+.navbar {
+    background-color: #007cbc ;
+    height: 120px;
+}
+
+/* Style do checkbox */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.sliders {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.sliders:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.sliders {
+    background-color: #2196F3;
+}
+
+input:focus+.sliders {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.sliders:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.sliders.round {
+    border-radius: 34px;
+}
+
+.sliders.round:before {
+    border-radius: 50%;
+}
+
+.checkbox_flutuante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: orange;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: large;
+    background-color: black;
+    border-radius: 5px ;
+    border:none;
+}
+
+#checkbox_icon {
+    width: 14px;
+    height: 14px;
+}
+
+
+/* Campo de pesquisa */
+.pesquisa {
+    display: flex;
+    height: 35px;
+}
+
+.pesquisa:hover {
+    transition: 0.1s ease-in;
+}
+
+.pesquisa_button {
+    width: 35px;
+    border: 1px solid black;
+}
+
+#pesquisa_icon {
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+}
+
+.pesquisa_input {
+    width: 200px;
+}
+
+.logo {
+    width: 420px;
+}
+
+.carrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    color: black;
+}
+
+#carrinho_icon {
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.conteudo {
+    margin-top:50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    flex-direction: row;
+}
+
+.titulo_jogo {
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 50px;
+}
+
+.valor {
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.preco {
+    width: 400px;
+    height: 70px;
+    background: rgb(219, 219, 219);
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.compra {
+    margin-right: -10px;
+    width: 200px;
+    height: 60px;
+    background: #007cbc ;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.compra:hover {
+    width: 200px;
+    height: 60px;
+    background: #007cbc ;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    text-decoration: none;
+    
+}
+
+.descricao {
+    background: orange ;
+    width: 600px;
+    height: 300px;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.rating {
+    font-size: 30px;
+    text-align: center;
+}
+.rating_inputs{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  
+}
+.rating input {
+    display: none;
+    
+}
+
+.rating label {
+    color: black;
+    cursor: pointer;
+    
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #0099ff;
+}
+
+.conteudo_jogos{
+    display: flex;
+    justify-content: space-between;
+}
+.suporte {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+
+}
+
+.follow {
+    text-align: center;
+    font-size: 30px;
+    margin: 8px;
+    margin-right: 100px;
+    color: black;
+}
+
+.icone_insta {
+    width: 60px;
+}
+
+.rodape {
+    font-size: 20px;
+    text-align: center;
+}
+
+.banner {
+    width: 100%;
+
+}
+.flex{
+    height: 6em;
+    background: orange;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
